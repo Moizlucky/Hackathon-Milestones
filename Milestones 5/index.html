@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Shareable Resume Builder</h1>
+    <br>
+    
+    <form id="resume-form">
+        <fieldset>
+            <legend><h3>Personal Information</h3></legend>
+
+            <label for="username">Username :</label>
+            <input type="text" id="username" placeholder="Enter Your Username" required>
+
+            <label for="name">Name :</label>
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+
+            <label for="phone">Phone Number :</label>
+            <input type="tel" id="phone" placeholder="Enter Your Phone Number" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" placeholder="Enter Your Email" required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Objective</h3></legend>
+            <label for="objective">Objective :</label>
+            <textarea id="objective" placeholder="Enter Your Objective" rows="3" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Education</h3></legend>
+            <label for="education">Education :</label>
+            <textarea id="education" placeholder="Enter Your Education" rows="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Experience</h3></legend>
+            <label for="experience">Experience :</label>
+            <textarea id="experience" placeholder="Enter Your Work Experience" rows="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Skills</h3></legend>
+            <label for="skills">Skills :</label>
+            <textarea id="skills" placeholder="Enter Your Skills" rows="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Languages</h3></legend>
+            <label for="language">Languages :</label>
+            <textarea id="language" placeholder="Enter Languages You Speak" rows="3" required></textarea>
+        </fieldset>
+
+        <button type="submit"><b>Generate Resume</b></button>
+    </form>
+
+    <!-- Dynamic And Editable Resume -->
+    <div id="resume-display" contenteditable="true">
+        <!-- The dynamically generated resume will appear here -->
+    </div>
+
+    <br>
+
+    <!-- Shareable link and download option -->
+    <fieldset style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 400px; height: 300px; border: 2px solid #302828; margin: 0 auto;">
+        <div id="shareable-link-container" style="display: none;">
+            <center><h2>Shareable Link</h2></center>
+            <a href="#" id="shareable-link" target="_blank"></a>
+
+            <br>
+            <br>
+
+            <center><b>You Can Download PDF Here</b></center>
+            <center>👇👇👇</center>
+            <br>
+            <button id="download-pdf"><b>Download PDF</b></button>
+        </div>
+    </fieldset>
+
+    <script src="typescript.js"></script> <!-- Include the compiled TypeScript (as JavaScript) -->
+</body>
+</html>
